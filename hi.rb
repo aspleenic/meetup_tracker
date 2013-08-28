@@ -1,3 +1,8 @@
+require 'sinatra' 
+require 'rest-open-uri'
+require 'json'
+require 'rest-client'
+
 
 get '/' do
   erb :index
