@@ -1,3 +1,4 @@
+require 'hi'
 require 'rubygems'
 require 'bundler'
 
