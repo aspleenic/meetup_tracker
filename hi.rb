@@ -1,11 +1,3 @@
-require 'rubygems'
-require 'bundler/setup'
-require 'sinatra'
-require 'open-uri'
-require 'json'
-require 'rmeetup'
-require 'rest_client'
-require 'addressable/uri'
 
 get '/' do
   erb :index
