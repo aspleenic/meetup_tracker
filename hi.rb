@@ -1,3 +1,7 @@
+require 'rubygems'
+require 'bundler'
+Bundler.setup
+
 require 'sinatra' 
 require 'rest-open-uri'
 require 'json'
@@ -19,8 +23,9 @@ get '/ruby' do
     city = j['city']
     focus = j['who']
     count = j['members']
+    contact = j['organizer_name']
     
-    output << "<tr><td>#{name}</td> <td>#{city}</td> <td>#{focus}</td> <td>#{count}</td></tr>"
+    output << "<tr><td>#{name}</td> <td>#{city}</td> <td>#{focus}</td> <td>#{count}</td><td>#{contact}</td</tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
 end
