@@ -24,8 +24,9 @@ get '/ruby' do
     focus = j['who']
     count = j['members']
     contact = j['organizer_name']
+    link = j['link']
     
-    output << "<tr><td>#{name}</td> <td>#{city}</td> <td>#{focus}</td> <td>#{count}</td><td>#{contact}</td</tr>"
+    output << "<tr><td>#{name}</td> <td>#{city}</td> <td>#{focus}</td> <td>#{count}</td><td>#{contact}</td><td><a href = '#{link}' target = _new>Link</a></td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
 end
@@ -41,8 +42,10 @@ get '/php' do
     city = j['city']
     focus = j['who']
     count = j['members']
+    contact = j['organizer_name']
+    link = j['link']
     
-    output << "<tr><td>#{name}</td> <td>#{city}</td> <td>#{focus}</td> <td>#{count}</td></tr>"
+    output << "<tr><td>#{name}</td> <td>#{city}</td> <td>#{focus}</td> <td>#{count}</td><td>#{contact}</td><td><a href = '#{link}' target = _new>Link</a></td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
 end
@@ -58,8 +61,10 @@ get '/nodejs' do
     city = j['city']
     focus = j['who']
     count = j['members']
+    contact = j['organizer_name']
+    link = j['link']
     
-    output << "<tr><td>#{name}</td> <td>#{city}</td> <td>#{focus}</td> <td>#{count}</td></tr>"
+    output << "<tr><td>#{name}</td> <td>#{city}</td> <td>#{focus}</td> <td>#{count}</td><td>#{contact}</td><td><a href = '#{link}' target = _new>Link</a></td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
 end
