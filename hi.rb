@@ -29,7 +29,7 @@ get '/ruby' do
     link = j['link']
     country = j['country']
     
-    output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
+    output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
 end
@@ -49,7 +49,7 @@ get '/php' do
     link = j['link']
     country = j['country']
     
-    output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
+    output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
 end
@@ -69,7 +69,7 @@ get '/nodejs' do
     link = j['link']
     country = j['country']
     
-    output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
+    output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
 end
@@ -89,7 +89,7 @@ get '/cloud' do
     link = j['link']
     country = j['country']
     
-    output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
+    output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
 end
@@ -109,7 +109,7 @@ get '/devops' do
     link = j['link']
     country = j['country']
     
-    output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
+    output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
 end
