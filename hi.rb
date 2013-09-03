@@ -25,8 +25,9 @@ get '/ruby' do
     count = j['members']
     contact = j['organizer_name']
     link = j['link']
+    country = j['country']
     
-    output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td> <td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
+    output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
 end
