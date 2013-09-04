@@ -12,7 +12,7 @@ get '/' do
   erb :index
 end
 
-# TODO: Add devops, Cloud, CTO
+# TODO: Add CTO
 
 get '/ruby' do
   api_result = RestClient.get 'http://api.meetup.com/groups.json/?&topic=ruby&order=members&key=682d733452163d471f4656620674a53'
