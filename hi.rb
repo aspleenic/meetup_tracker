@@ -12,7 +12,7 @@ get '/' do
   erb :index
 end
 
-# TODO: Add devops, Cloud, CTO
+# TODO: DRY this up!!
 
 get '/ruby' do
   @type = params[:type]
@@ -115,7 +115,8 @@ get '/devops' do
   erb :meetup_table, :locals => {result: output, counter: counter}
 end
 
-get '/cto' do
+
+get '/CTO' do
   api_result = RestClient.get 'http://api.meetup.com/groups.json/?&topic=CTO&order=members&key=682d733452163d471f4656620674a53'
   jhash = JSON.parse(api_result)
   counter = jhash['results'].count
