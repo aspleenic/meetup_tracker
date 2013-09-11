@@ -1,15 +1,49 @@
-<h1>Welcome to Meetup Land</h1>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<h3>Which meetup are you checking on?</h3><br />
-	<ul>
-		<li><a href = '/ruby' value = 'ruby'>Ruby</a><br /></li>
-		<li><a href = '/php' value = 'php'>PHP</a><br /></li>
-		<li><a href = '/nodejs' value = 'nodejs'>NodeJS</a></li>
-		<li><a href = '/cloud' value = 'cloud'>Cloud</a></li>
-		<li><a href = '/devops' value = 'devops'>DevOps</a></li>
-		<li><a href = '/CTO' value = 'CTO'>CTO</a></li>
-	</ul>
-	
-	<br />
+        <link rel="stylesheet" href="/app.css">
+    </head>
+    <body>
+		 
+		<div class="container">
+		 	
+		 	<header class="masthead">
+				<h1 class="logo"><a href = "/">Welcome to Meetup Land</a></h1>
+				
+				<h3><span class="line1">Which meetup are you</span><br/><span class="line2">checking on?</span></h3>
+		 	</header>
+			
+			<main role="main">
 
-<img src = '/images/logo-ey.png'></img>
+				<nav class="types clearfix">
+					<ul>
+						<li><a href = '/ruby' value = 'ruby'>Ruby</a></li>
+						<li><a href = '/php' value = 'php'>PHP</a></li>
+						<li><a href = '/nodejs' value = 'nodejs'>NodeJS</a></li>
+						<li><a href = '/cloud' value = 'cloud'>Cloud</a></li>
+						<li><a href = '/devops' value = 'devops'>DevOps</a></li>
+						<li class="last"><a href = '/CTO' value = 'CTO'>CTO</a></li>
+					</ul>
+				</nav>
+			
+			</main>
+			
+			<footer>	
+				<!--a href = "#" title = "Engine Yard" class="button dark">Try Engine Yard</a-->
+				<h2 class="ey"><a href = "https://www.engineyard.com" title = "Engine Yard"><img src = '/images/logo-ey.png' alt="engine Yard" /></a></h2>
+			</footer>
+
+		</div>
+		
+	</body>
+
+</html>

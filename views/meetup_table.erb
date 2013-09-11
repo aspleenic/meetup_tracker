@@ -1,13 +1,49 @@
-<p>There are <%= counter %> Meetup Groups according to Meetup.com</p>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<table class = 'table' border = '1'>
-	<tr>
-		<th>Name</th>
-		<th>City</th>
-		<th>Country</th>
-		<th>Focus</th>
-		<th>Members</th>
-		<th>Contact Name</th>
-	</tr>
-		<%= result %>
-</table>
+        <link rel="stylesheet" href="/app.css">
+    </head>
+    <body class="inner">
+		 
+		<div class="container">
+			
+		 	<header class="masthead">
+				<h1 class="logo small"><a href = "/">Welcome to Meetup Land</a></h1>
+				
+				<div class="back"><a href="/">Back</a></h3>
+		 	</header>
+			
+			<main role="main">
+				<p class="detail">There are <%= counter %> Meetup Groups according to Meetup.com</p>
+				
+				<table class = 'meetups'>
+					<tr>
+						<th>Name</th>
+						<th>City</th>
+						<th>Country</th>
+						<th>Focus</th>
+						<th>Members</th>
+						<th>Contact Name</th>
+					</tr>
+						<%= result %>
+				</table>
+			</main>
+			<footer>	
+				<!--a href = "#" title = "Engine Yard" class="button dark">Try Engine Yard</a-->
+				<h2 class="ey"><a href = "https://www.engineyard.com" title = "Engine Yard"><img src = '/images/logo-ey.png' alt="engine Yard" /></a></h2>
+			</footer>
+
+		</div>
+		
+	</body>
+
+</html>
