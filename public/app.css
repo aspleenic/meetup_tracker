@@ -750,6 +750,7 @@ nav.types ul li a:hover{
 .back { position: absolute; top:30px; left: 20px; margin: 0; }
 .inner .back{ top:55px; left: 40px;}
 .back a{ display:block; font-size: 15px; background: #4c9bc5; padding:16px; text-decoration: none; color: #fff; border-radius: 10px; -webkit-border-radius: 10px; border: 1px solid #b1d8ed; }
+.back a:hover{ opacity: 0.8}
 
 footer{padding-bottom:130px;}
 footer .button{	
@@ -839,7 +840,7 @@ footer h2.ey img{width: 100%; display: block; border-radius: 10px; -webkit-borde
 	}
 	
 	.meetups {
-		font-size: 12px;
+		font-size: 14px;
 	}
 	
 	.inner .back, .back { top:0px; left: 0px; }
@@ -883,15 +884,15 @@ only screen and (max-width: 767px)  {
 		/* Now like a table header */
 		position: absolute;
 		/* Top/left values mimic padding */
-		top: 18px;
-		left: 18px;
+		top: 16px;
+		left: 16px;
 		color: #444757;
 		width: 45%; 
 		padding-right: 10px; 
 		white-space: nowrap;
 		font-weight:normal;
 		text-transform: uppercase;
-		font-size:10px;
+		font-size:14px;
 	}
 	
 	/*
