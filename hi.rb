@@ -7,6 +7,8 @@ require 'rest-open-uri'
 require 'json'
 require 'rest-client'
 
+# require 'datamapper'
+
 get '/' do
   erb :index
 end
@@ -35,6 +37,8 @@ end
 #    end
 #    erb :meetup_table, :locals => {result: output, counter: counter}
 #  end
+ 
+# DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/meetup.db")
 
 get '/ruby' do
   type = params[:type]
