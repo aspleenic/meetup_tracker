@@ -242,3 +242,23 @@ get '/python' do
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
 end
+
+get '/magento' do
+  api_result = RestClient.get 'http://api.meetup.com/groups.json/?&topic=magento&order=members&key=682d733452163d471f4656620674a53'
+  jhash = JSON.parse(api_result)
+  counter = jhash['results'].count
+  output = ''
+
+  jhash['results'].each do |j|
+    name = j['name']
+    city = j['city']
+    focus = j['who']
+    count = j['members']
+    contact = j['organizer_name']
+    link = j['link']
+    country = j['country']
+    
+    output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
+  end
+  erb :meetup_table, :locals => {result: output, counter: counter}
+end
