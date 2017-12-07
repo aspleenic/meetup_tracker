@@ -2,8 +2,8 @@ require 'rubygems'
 require 'bundler'
 Bundler.setup
 
-require 'sinatra' 
-require 'rest-open-uri'
+require 'sinatra'
+# require 'rest-open-uri'
 require 'json'
 require 'rest-client'
 
@@ -23,7 +23,7 @@ end
 #    jhash = JSON.parse(api_result)
 #    counter = jhash['results'].count
 #    output = ''
-#  
+#
 #    jhash['results'].each do |j|
 #      name = j['name']
 #      city = j['city']
@@ -32,12 +32,12 @@ end
 #      contact = j['organizer_name']
 #      link = j['link']
 #      country = j['country']
-#      
+#
 #      output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
 #    end
 #    erb :meetup_table, :locals => {result: output, counter: counter}
 #  end
- 
+
 # DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/meetup.db")
 
 get '/ruby' do
@@ -56,7 +56,29 @@ get '/ruby' do
     contact = j['organizer_name']
     link = j['link']
     country = j['country']
-    
+
+    output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
+  end
+  erb :meetup_table, :locals => {result: output, counter: counter}
+end
+
+get '/db' do
+  type = params[:type]
+  logger.info(type)
+  api_result = RestClient.get 'http://api.meetup.com/groups.json/?&topic=data&order=members&key=682d733452163d471f4656620674a53'
+  jhash = JSON.parse(api_result)
+  counter = jhash['results'].count
+  output = ''
+
+  jhash['results'].each do |j|
+    name = j['name']
+    city = j['city']
+    focus = j['who']
+    count = j['members']
+    contact = j['organizer_name']
+    link = j['link']
+    country = j['country']
+
     output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
@@ -76,7 +98,7 @@ get '/php' do
     contact = j['organizer_name']
     link = j['link']
     country = j['country']
-    
+
     output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
@@ -96,7 +118,7 @@ get '/nodejs' do
     contact = j['organizer_name']
     link = j['link']
     country = j['country']
-    
+
     output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
@@ -116,7 +138,7 @@ get '/cloud' do
     contact = j['organizer_name']
     link = j['link']
     country = j['country']
-    
+
     output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
@@ -136,7 +158,7 @@ get '/devops' do
     contact = j['organizer_name']
     link = j['link']
     country = j['country']
-    
+
     output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
@@ -157,7 +179,7 @@ get '/CTO' do
     contact = j['organizer_name']
     link = j['link']
     country = j['country']
-    
+
     output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
@@ -177,7 +199,7 @@ get '/java' do
     contact = j['organizer_name']
     link = j['link']
     country = j['country']
-    
+
     output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
@@ -197,7 +219,7 @@ get '/startups' do
     contact = j['organizer_name']
     link = j['link']
     country = j['country']
-    
+
     output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
@@ -217,7 +239,7 @@ get '/security' do
     contact = j['organizer_name']
     link = j['link']
     country = j['country']
-    
+
     output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
@@ -237,7 +259,7 @@ get '/python' do
     contact = j['organizer_name']
     link = j['link']
     country = j['country']
-    
+
     output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
@@ -257,7 +279,7 @@ get '/magento' do
     contact = j['organizer_name']
     link = j['link']
     country = j['country']
-    
+
     output << "<tr><td>#{name}</td> <td><a href = '#{link}' target = _new>#{city}</a></td><td>#{country.upcase}</td><td>#{focus}</td> <td>#{count}</td><td>#{contact}</td></tr>"
   end
   erb :meetup_table, :locals => {result: output, counter: counter}
