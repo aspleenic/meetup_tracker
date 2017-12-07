@@ -124,8 +124,8 @@ get '/nodejs' do
   erb :meetup_table, :locals => {result: output, counter: counter}
 end
 
-get '/cloud' do
-  api_result = RestClient.get 'http://api.meetup.com/groups.json/?&topic=cloud&order=members&key=682d733452163d471f4656620674a53'
+get '/elixir' do
+  api_result = RestClient.get 'http://api.meetup.com/groups.json/?&topic=elixir&order=members&key=682d733452163d471f4656620674a53'
   jhash = JSON.parse(api_result)
   counter = jhash['results'].count
   output = ''
