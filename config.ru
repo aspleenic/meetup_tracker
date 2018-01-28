@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'bundler'
 
-# require './hi'
+require './hi'
 Bundler.require
 
 map "/" do
