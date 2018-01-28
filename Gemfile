@@ -9,5 +9,6 @@ gem 'rmeetup'
 gem 'rest-client'
 gem 'addressable'
 gem 'unicorn'
+gem 'puma'
 
 gem 'datamapper'

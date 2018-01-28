@@ -54,6 +54,7 @@ GEM
     mustermann (1.0.1)
     netrc (0.11.0)
     public_suffix (3.0.1)
+    puma (3.9.1)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
@@ -88,6 +89,7 @@ DEPENDENCIES
   bundler
   datamapper
   json (~> 2.1.0)
+  puma
   rest-client
   rest-open-uri
   rmeetup
