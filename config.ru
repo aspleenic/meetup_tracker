@@ -1,10 +1,11 @@
 require 'rubygems'
 require 'bundler'
-require './lib/app'
 
 require './hi'
 Bundler.require
 
-map "/" do
-  run Sinatra::Application
-end
+run Sinatra::Application
+
+# map "/" do
+#   run Sinatra::Application
+# end
