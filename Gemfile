@@ -1,9 +1,9 @@
 source 'http://rubygems.org'
-ruby '2.4.0'
+ruby '~> 2.4.0'
 
 gem 'rubygems-update'
 gem 'bundler'
-gem 'sinatra'
+gem 'sinatra', '~> 2.0.2'
 gem 'rf-rest-open-uri'
 gem 'json', '~> 2.1.0'
 gem 'rmeetup'
